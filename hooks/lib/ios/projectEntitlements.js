@@ -129,7 +129,7 @@ function generateAssociatedDomainsContent(pluginPreferences) {
  */
 function domainsListEntryForHost(host) {
   if (host.name.startsWith('webcredentials')) {
-    return 'webcredentials:' + host.name;
+    return host.name;
   }
   return 'applinks:' + host.name;
 }
