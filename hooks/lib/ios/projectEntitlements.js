@@ -128,8 +128,8 @@ function generateAssociatedDomainsContent(pluginPreferences) {
  * @return {String} record
  */
 function domainsListEntryForHost(host) {
-  if (host.indexOf('webcredentials:') === 0 || host.indexOf('applinks:') === 0) {
-    return host;
+  if (host.schema === 'webcredentials') {
+    return 'webcredentials:' + host.name;
   }
   return 'applinks:' + host.name;
 }
