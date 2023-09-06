@@ -128,7 +128,7 @@ function generateAssociatedDomainsContent(pluginPreferences) {
  * @return {String} record
  */
 function domainsListEntryForHost(host) {
-  if (host.schema === 'webcredentials') {
+  if (host.name.startsWith('webcredentials')) {
     return 'webcredentials:' + host.name;
   }
   return 'applinks:' + host.name;
